@@ -8,13 +8,21 @@ export const apiEndpoints = {
   },
   properties: {
     list: '/properties/',
+    create: '/properties/',
     detail: (propertyId: string) => `/properties/${propertyId}/`,
   },
   listings: {
+    create: '/listings/',
     list: '/listings/',
     detail: (listingId: string) => `/listings/${listingId}/`,
+    mine: '/listings/mine/',
+    pause: (listingId: string) => `/listings/${listingId}/pause/`,
+    publish: (listingId: string) => `/listings/${listingId}/publish/`,
+    resume: (listingId: string) => `/listings/${listingId}/resume/`,
+    close: (listingId: string) => `/listings/${listingId}/close/`,
   },
   documents: {
+    create: '/documents/',
     list: '/documents/',
     detail: (documentId: string) => `/documents/${documentId}/`,
     download: (documentId: string) => `/documents/${documentId}/download/`,

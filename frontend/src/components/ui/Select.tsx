@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import type { SelectHTMLAttributes } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -7,7 +8,8 @@ type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
   options: Array<{ label: string; value: string }>
 }
 
-export function Select({ className, id, label, options, ...props }: SelectProps) {
+export const Select = forwardRef<HTMLSelectElement, SelectProps>(
+  ({ className, id, label, options, ...props }, ref) => {
   const selectId = id ?? props.name
 
   return (
@@ -20,6 +22,7 @@ export function Select({ className, id, label, options, ...props }: SelectProps)
             className,
           )}
           id={selectId}
+          ref={ref}
           {...props}
         >
           {options.map((option) => (
@@ -35,4 +38,7 @@ export function Select({ className, id, label, options, ...props }: SelectProps)
       </span>
     </label>
   )
-}
+  },
+)
+
+Select.displayName = 'Select'

@@ -1,11 +1,8 @@
-import { RouteShell } from '@/components/common/RouteShell'
+import { SellerOverviewPage } from '@/features/seller/pages/SellerOverviewPage'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export function SellerDashboardPage() {
-  return (
-    <RouteShell
-      eyebrow="Seller workspace"
-      title="Seller dashboard"
-      description="Seller listing, offer, and verification workflows will be available here as the authenticated seller workspace is expanded."
-    />
-  )
+  usePageTitle('Seller Workspace')
+
+  return <SellerOverviewPage />
 }

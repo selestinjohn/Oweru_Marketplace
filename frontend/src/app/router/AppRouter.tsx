@@ -24,8 +24,21 @@ import { SettingsPage } from '@/pages/buyer/SettingsPage'
 import { HomePage } from '@/pages/public/HomePage'
 import { PropertiesPage } from '@/pages/public/PropertiesPage'
 import { PropertyDetailPage } from '@/pages/public/PropertyDetailPage'
+import { SellerDashboardPage } from '@/pages/seller/SellerDashboardPage'
+import { SellerListingCreatePage } from '@/features/seller/pages/SellerListingCreatePage'
+import { SellerListingDetailPage } from '@/features/seller/pages/SellerListingDetailPage'
+import { SellerListingEditPage } from '@/features/seller/pages/SellerListingEditPage'
+import { SellerListingsPage } from '@/features/seller/pages/SellerListingsPage'
+import { SellerPropertiesPage } from '@/features/seller/pages/SellerPropertiesPage'
+import { SellerPropertyCreatePage } from '@/features/seller/pages/SellerPropertyCreatePage'
+import { SellerPropertyDetailPage } from '@/features/seller/pages/SellerPropertyDetailPage'
+import { SellerPropertyDocumentsPage } from '@/features/seller/pages/SellerPropertyDocumentsPage'
+import { SellerPropertyEditPage } from '@/features/seller/pages/SellerPropertyEditPage'
+import { SellerVerificationsPage } from '@/features/seller/pages/SellerVerificationsPage'
 import { VerificationDetailPage } from '@/pages/verification/VerificationDetailPage'
 import { VerificationWorkspacePage } from '@/pages/verification/VerificationWorkspacePage'
+
+const sellerRoles = ['SELLER', 'AGENT', 'PROPERTY_MANAGER', 'ADMIN'] as const
 
 const router = createBrowserRouter([
   {
@@ -106,6 +119,94 @@ const router = createBrowserRouter([
           { path: routePaths.documents, element: <DashboardDocumentsPage /> },
           { path: routePaths.profile, element: <ProfilePage /> },
           { path: routePaths.settings, element: <SettingsPage /> },
+          {
+            path: routePaths.seller,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerDashboardPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerProperties,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerPropertiesPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerPropertyNew,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerPropertyCreatePage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerPropertyDocuments,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerPropertyDocumentsPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerPropertyEdit,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerPropertyEditPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerPropertyDetail,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerPropertyDetailPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerListings,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerListingsPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerListingNew,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerListingCreatePage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerListingEdit,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerListingEditPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerListingDetail,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerListingDetailPage />
+              </RoleRoute>
+            ),
+          },
+          {
+            path: routePaths.sellerVerifications,
+            element: (
+              <RoleRoute allowedRoles={sellerRoles}>
+                <SellerVerificationsPage />
+              </RoleRoute>
+            ),
+          },
         ],
       },
     ],
