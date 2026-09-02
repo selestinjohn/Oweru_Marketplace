@@ -1,0 +1,4 @@
+class InvalidDocumentTransition(
+    Exception
+):
+    pass

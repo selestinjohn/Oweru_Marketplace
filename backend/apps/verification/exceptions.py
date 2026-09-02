@@ -1,0 +1,4 @@
+class InvalidVerificationTransition(
+    Exception
+):
+    pass

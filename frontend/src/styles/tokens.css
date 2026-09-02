@@ -1,0 +1,52 @@
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-navy: var(--oweru-navy);
+  --color-navy-light: var(--oweru-navy-light);
+  --color-gold: var(--oweru-gold);
+  --color-gold-hover: var(--oweru-gold-hover);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --font-sans: var(--oweru-font-sans);
+  --font-display: var(--oweru-font-display);
+}
+
+:root {
+  --oweru-navy: #0f172a;
+  --oweru-navy-light: #2d3a58;
+  --oweru-gold: #c89128;
+  --oweru-gold-hover: #b27f21;
+  --surface: #ffffff;
+  --surface-muted: #f8f8f9;
+  --background: #f8f8f9;
+  --foreground: #151b2c;
+  --card: #ffffff;
+  --border: rgba(15, 23, 42, 0.12);
+  --muted: #eef1f5;
+  --muted-foreground: #687087;
+  --primary: #0f172a;
+  --primary-foreground: #ffffff;
+  --accent: #c89128;
+  --accent-foreground: #151b2c;
+  --success: #237a57;
+  --warning: #c89128;
+  --danger: #b42318;
+  --radius-card: 0.5rem;
+  --radius-control: 0.375rem;
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+  --shadow-panel: 0 10px 30px rgba(15, 23, 42, 0.07);
+  --oweru-font-sans: 'Poppins', 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --oweru-font-display: 'Futura PT', 'Avenir Next', 'Trebuchet MS', system-ui,
+    sans-serif;
+}

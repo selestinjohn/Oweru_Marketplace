@@ -1,0 +1,4 @@
+class InvalidListingTransition(
+    Exception
+):
+    pass

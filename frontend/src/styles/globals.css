@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html {
+  min-width: 320px;
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100svh;
+  margin: 0;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--oweru-font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.68;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--oweru-font-display);
+  letter-spacing: 0;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--oweru-gold) 70%, white);
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100svh;
+}
